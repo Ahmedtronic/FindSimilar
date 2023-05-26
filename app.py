@@ -34,7 +34,7 @@ def index():
         image = request.files['fileup']
         newimage = Image.open(image)
         newimage.save("Ahmed.jpg")
-        st.get_image_metadata_file()
+        #st.get_image_metadata_file()
         similar_images = st.get_similar_images(image_path="Ahmed.jpg", number_of_images=10)
         #os.remove(newimage.filename) 
         images  = []
