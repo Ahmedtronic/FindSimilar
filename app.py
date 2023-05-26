@@ -1,7 +1,7 @@
 from flask import Flask, jsonify
 from flask import request
 import os
-0from PIL import Image
+from PIL import Image
 from DeepImageSearch import Load_Data, Search_Setup
 import wget
 import shutil
