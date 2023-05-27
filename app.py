@@ -34,24 +34,35 @@ def is_valid_image(file):
 
 
 
-
 @app.route('/', methods=['POST', "GET"])
+def new():
+    return jsonify({"Testing": "Hello"})
+
+
+@app.route('/api', methods=['POST', "GET"])
 def index():
     
+    print("We are here")
     if request.method == 'POST':
+        print("Post here")
         image = request.files['fileup']
         newimage = Image.open(image)
+        print("Image Loaded")
         newimage.save("Ahmed.jpg")
+        print("Image Saved")
         x = st.get_image_metadata_file()
+        print("metadata loaded")
         similar_images = st.get_similar_images(image_path="Ahmed.jpg", number_of_images=10)
+        print("similar images")
         #os.remove(newimage.filename) 
         images  = []
         for index in similar_images:
             images.append(similar_images[index])
-
+        print("Images are done")
         return jsonify({"Testing": images})
         
     else:
+        print("we are in else")
         return jsonify({"Error": "No Images"})
             
 
