@@ -21,7 +21,7 @@ if int(x) == 0:
     file.write("1")
 
 file.close()
-
+meta = st.get_image_metadata_file()
 app = Flask(__name__)
 
 def is_valid_image(file):
@@ -50,7 +50,8 @@ def index():
         print("Image Loaded")
         newimage.save("Ahmed.jpg")
         print("Image Saved")
-        x = st.get_image_metadata_file()
+        print("we are here")
+        #x = st.get_image_metadata_file()
         print("metadata loaded")
         similar_images = st.get_similar_images(image_path="Ahmed.jpg", number_of_images=10)
         print("similar images")
