@@ -15,6 +15,7 @@ x = file.readline()
 if int(x) == 0:
     wget.download("https://idecoqa.com/image_features_vectors.idx")
     wget.download("https://idecoqa.com/image_data_features.pkl")
+    print("Done")
     shutil.move("image_features_vectors.idx", "metadata-files/vgg19/image_features_vectors.idx" )
     shutil.move("image_data_features.pkl", "metadata-files/vgg19/image_data_features.pkl" )
     #st.run_index()
