@@ -6,19 +6,19 @@ from DeepImageSearch import Load_Data, Search_Setup
 import wget
 import shutil
 
-print('Loading Data")
+print("Loading Data")
 image_list = Load_Data().from_folder(folder_list = ["Data"])
-print('Data Loaded")
-print('Loading Model")
+print("Data Loaded")
+print("Loading Model")
 st = Search_Setup(image_list, model_name="vgg19", pretrained=True)
-print('Model Loaded")
+print("Model Loaded")
 file = open("first.txt", "r+")
 x = file.readline()
 if int(x) == 0:
-    print('Download Weights")
+    print("Download Weights")
     wget.download("https://idecoqa.com/image_features_vectors.idx")
     wget.download("https://idecoqa.com/image_data_features.pkl")
-    print('Weights Downloaded")
+    print("Weights Downloaded")
     print("Done")
     shutil.move("image_features_vectors.idx", "metadata-files/vgg19/image_features_vectors.idx" )
     shutil.move("image_data_features.pkl", "metadata-files/vgg19/image_data_features.pkl" )
