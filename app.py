@@ -17,8 +17,8 @@ x = file.readline()
 if int(x) == 0:
     print("Download Weights")
     
-    wget.download("https://download1326.mediafire.com/v007a2zsj4vgtpBu34LQo7l1ZC3UHZsaoJNDm7DQUyepa12N2I5M2VcQZkFFIPKhluv2_cn3bY_cklv2qXlCdLnvr2TFpNR769nYqtdDWOHSINRpXIGR2VHoMOHnrFl-EPSYgvuyxj-maA_E6dmy7tTacYOQdYy05Q7RIhjPR10/ekg10hcq141v5hi/image_features_vectors.idx")
-    wget.download("https://download1584.mediafire.com/re2w5ite1zlgrq66_uYN6K6VDzsfy5rnWpgTboqqy2Nfpc3UEcb4LNry0uSQcYF3jPuf6psQSF-SrSjUnutnNoqpyG1i1OpF-lVjpmUM961LDBZ0YqT7e3JD5y5nbaMSEN6-nOU7q3IevSQorOSHsoVw-nhEfnI9fCwbvswzpZo/0aemngb1qh3t9cn/image_data_features.pkl")
+    wget.download("https://download1326.mediafire.com/1ga0rvjg6qkgha8oOPFVHY2V_WLYwde6gCWBXT1FQlhATeqS-GNBaZrzcuNuwZSCLs76qScw1vWYEhFSLNiKLjkMJX3Gog3gCSUz2VzV2IRE5ZfZOySSbF5HHww8AU9_dYJNZIriOyGNI4hTosvysfJZvpOY93jRC2z77H9N_66D/ekg10hcq141v5hi/image_features_vectors.idx")
+    wget.download("https://download1584.mediafire.com/29g7k41bwpqg5eCW0sOQnrNX853Xxi74F66GoMquaXqTH4jeAPyMKr4H8N2vrtBfjscyLDHOJxyMusdAfZEMRq7ZbKzG3hKPPbjf_YIDPcgAf3Keca8UzD6kAPro24YbwhV_63uLYfYWAG9ka8c-L_rCFZ09alLyplZ3OTS_uKfC/0aemngb1qh3t9cn/image_data_features.pkl")
     print("Weights Downloaded")
     print("Done")
     shutil.move("image_features_vectors.idx", "metadata-files/vgg19/image_features_vectors.idx" )
